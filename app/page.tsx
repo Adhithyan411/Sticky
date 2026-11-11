@@ -7,7 +7,7 @@ import Bento from "../components/landing/bento"
 import Sponsor from "../components/landing/sponsor"
 import GetStarted from "../components/landing/get-started"
 import Footer from "../components/landing/footer"
-import { VisitorCounter, GitHubStarButton } from "../components/landing/nav-actions"
+import { GitHubStarButton } from "../components/landing/nav-actions"
 import { HeroVideoBackground } from "../components/landing/hero-video-background"
 
 /* ---------- data ---------- */
@@ -397,8 +397,8 @@ export default function Home() {
       {/* navbar */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 w-full px-4 py-2 transition-[background-color,border-color,box-shadow] duration-200 ${isAtTop
-            ? "bg-transparent border-b border-transparent shadow-none"
-            : "backdrop-blur-md bg-white/85 border-b border-zinc-200/70 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05),0_1px_2px_rgba(0,0,0,0.02)]"
+          ? "bg-transparent border-b border-transparent shadow-none"
+          : "backdrop-blur-md bg-white/85 border-b border-zinc-200/70 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05),0_1px_2px_rgba(0,0,0,0.02)]"
           }`}
         style={{
           transform: navVisible ? "translate3d(0, 0, 0)" : "translate3d(0, -100%, 0)",
@@ -415,16 +415,14 @@ export default function Home() {
               src="/stickers/logo.svg"
               alt="Stick it up logo"
               className={`h-9 w-9 rounded-lg transition-all duration-200
-                group-hover:-rotate-6 group-hover:scale-110 ${
-                  isAtTop ? "ring-1 ring-white/25 shadow-xs" : ""
+                group-hover:-rotate-6 group-hover:scale-110 ${isAtTop ? "ring-1 ring-white/25 shadow-xs" : ""
                 }`}
             />
             <span
-              className={`text-lg font-semibold tracking-tight transition-colors duration-200 ${
-                isAtTop
-                  ? "text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.4)]"
-                  : "text-zinc-900"
-              }`}
+              className={`text-lg font-semibold tracking-tight transition-colors duration-200 ${isAtTop
+                ? "text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.4)]"
+                : "text-zinc-900"
+                }`}
             >
               Stick it up
             </span>
@@ -437,11 +435,10 @@ export default function Home() {
               { label: "Docs", href: "/stickers#docs" },
               { label: "npm", href: "https://www.npmjs.com/package/stick-blush" },
             ].map((link) => {
-              const linkClass = `rounded-lg px-3.5 py-2 text-sm font-medium transition-colors duration-150 ${
-                isAtTop
-                  ? "text-white/90 hover:bg-white/15 hover:text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
-                  : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"
-              }`;
+              const linkClass = `rounded-lg px-3.5 py-2 text-sm font-medium transition-colors duration-150 ${isAtTop
+                ? "text-white/90 hover:bg-white/15 hover:text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
+                : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"
+                }`;
               return (
                 <li key={link.label}>
                   {link.href.startsWith("http") ? (
@@ -463,9 +460,8 @@ export default function Home() {
             })}
           </ul>
 
-          {/* visitor counter & github star */}
+          {/* github star */}
           <div className="flex shrink-0 items-center gap-1.5 sm:gap-2.5">
-            <VisitorCounter />
             <GitHubStarButton />
           </div>
         </nav>
@@ -596,8 +592,8 @@ export default function Home() {
               <span className="relative grid" aria-live="polite">
                 <span
                   className={`col-start-1 row-start-1 transition-all duration-300 ease-out ${copied
-                      ? "-translate-y-1 opacity-0 blur-[2px]"
-                      : "translate-y-0 opacity-100 blur-0"
+                    ? "-translate-y-1 opacity-0 blur-[2px]"
+                    : "translate-y-0 opacity-100 blur-0"
                     }`}
                 >
                   npm i stick-blush@latest
@@ -605,8 +601,8 @@ export default function Home() {
 
                 <span
                   className={`col-start-1 row-start-1 font-medium transition-all duration-300 ease-out ${copied
-                      ? "translate-y-0 opacity-100 blur-0 delay-75"
-                      : "translate-y-1 opacity-0 blur-[2px]"
+                    ? "translate-y-0 opacity-100 blur-0 delay-75"
+                    : "translate-y-1 opacity-0 blur-[2px]"
                     }`}
                 >
                   Copied!

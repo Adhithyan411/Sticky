@@ -5,7 +5,7 @@ import Link from "next/link";
 import { LuCopyCheck, LuCopy } from "react-icons/lu";
 import { Sticker, type StickerName } from "stick-blush";
 import Footer from "../../components/landing/footer";
-import { VisitorCounter, GitHubStarButton } from "../../components/landing/nav-actions";
+import { GitHubStarButton } from "../../components/landing/nav-actions";
 
 
 
@@ -1190,9 +1190,8 @@ export default function StickersCatalogPage() {
             </li>
           </ul>
 
-          {/* visitor counter & github star */}
+          {/* github star */}
           <div className="flex shrink-0 items-center gap-1.5 sm:gap-2.5">
-            <VisitorCounter />
             <GitHubStarButton />
           </div>
         </nav>
